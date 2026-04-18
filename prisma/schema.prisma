@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SiteInventory {
+  id               String    @id @default(cuid())
+  domain           String    @unique
+  contactName      String?
+  email            String?
+  additionalEmails Json?     @default("[]")
+  contactNames     Json?     @default("[]")
+  price            Float?
+  ahrefsDR         Int?
+  mozDA            Int?
+  niche            String?
+  company          String?
+  notes            String?   @db.Text
+  acceptsIGaming   Boolean   @default(false)
+  status           String    @default("active")
+  lastContacted    DateTime?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@index([domain])
+  @@index([niche])
+  @@map("site_inventory")
+}
