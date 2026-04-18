@@ -1,6 +1,5 @@
 import { Slot, Slottable } from "@radix-ui/react-slot";
-import { Spinner } from "@shared/components/Spinner";
-import { cn } from "@ui/lib";
+import { cn } from "@/lib/utils";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 import * as React from "react";
@@ -58,7 +57,6 @@ const Button = ({
 			disabled={disabled || loading}
 			{...props}
 		>
-			{loading && <Spinner className="mr-1.5 size-4 text-inherit" />}
 			<Slottable>{children}</Slottable>
 		</Comp>
 	);

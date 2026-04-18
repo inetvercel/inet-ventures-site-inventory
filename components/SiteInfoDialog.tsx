@@ -1,13 +1,13 @@
 ﻿"use client";
 
-import { Button } from "@ui/components/button";
+import { Button } from "@/components/ui/button";
 import {
 	Dialog,
 	DialogContent,
 	DialogHeader,
 	DialogTitle,
-} from "@ui/components/dialog";
-import { Textarea } from "@ui/components/textarea";
+} from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
 import {
 	CheckCircle2Icon,
 	Edit2,
@@ -340,7 +340,7 @@ export function SiteInfoDialog({
 										Cancel
 									</Button>
 									<Button
-										variant="default"
+										variant="primary"
 										size="sm"
 										onClick={saveNotes}
 										disabled={savingNotes}

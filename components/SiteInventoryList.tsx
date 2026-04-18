@@ -1,8 +1,8 @@
 ﻿"use client";
 
-import { Button } from "@ui/components/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@ui/components/card";
-import { Input } from "@ui/components/input";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
 	Table,
 	TableBody,
@@ -10,7 +10,7 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
-} from "@ui/components/table";
+} from "@/components/ui/table";
 import {
 	DownloadIcon,
 	InfoIcon,
